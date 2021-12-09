@@ -10,7 +10,6 @@ import Foundation
 struct Constants {
     
     static let API_GET_CHARACTERS  = "public/characters"
-    static let API_GET_COUNTRIES = "countries"
     static let API_KEY = "apikey"
     static let API_HASH = "hash"
     static let API_TIMESTAMP = "ts"

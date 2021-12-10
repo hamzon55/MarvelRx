@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CharactersViewController: UIViewController {
+class CharactersViewController: UIViewController,UICollectionViewDelegateFlowLayout {
    
     // MARK: - Properties
     let disposeBag = DisposeBag()
@@ -23,18 +23,38 @@ class CharactersViewController: UIViewController {
         super.viewDidLoad()
         
         charactersCv.register(UINib(nibName: "CharactersCell", bundle: nil), forCellWithReuseIdentifier: "CharactersCell")
-      
+        charactersCv.rx.setDelegate(self).disposed(by: disposeBag)
+
         bindTableView()
         viewModel.fetchCharacters{ (errorMessage) in
            
         }
-        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5.0, left: 1.0, bottom: 1.0, right: 1.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let lay = collectionViewLayout as! UICollectionViewFlowLayout
+      
+        let widthPerItem = collectionView.frame.width / 2 - lay.minimumInteritemSpacing
+
+        return CGSize(width:widthPerItem, height:200)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
 }
     
+
 extension CharactersViewController {
     func bindTableView() {
         

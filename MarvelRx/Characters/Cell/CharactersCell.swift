@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CharactersCell: UICollectionViewCell {
     
@@ -33,10 +34,11 @@ class CharactersCell: UICollectionViewCell {
 extension CharactersCell {
     private func configure() {
         lblHero.text = viewModel.name
+        lblHero.textColor = .black
+      
         
-        let url = URL(string: viewModel.thumbnail.path! + "." + "jpg")
-        guard let data = try? Data(contentsOf: url!) else { return }
-        heroImg?.image = UIImage(data: data)
-        
+        let url =  URL(string: viewModel.thumbnail.path! + "." + "jpg")
+        heroImg.kf.setImage(with: url)
+
     }
 }

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.9.0)
   - Differentiator (4.0.1)
+  - Kingfisher (7.1.1)
   - ObjectMapper (4.2.0)
   - ReactiveCoordinator (4.0.0):
     - RxSwift
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.9)
+  - Kingfisher
   - ObjectMapper
   - ReactiveCoordinator (= 4.0.0)
   - RxAlamofire
@@ -33,6 +35,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Differentiator
+    - Kingfisher
     - ObjectMapper
     - ReactiveCoordinator
     - RxAlamofire
@@ -44,6 +47,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   ReactiveCoordinator: 411fce7da599bbbb56d5ad9f3abe1e532e58a64f
   RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
@@ -52,6 +56,6 @@ SPEC CHECKSUMS:
   RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: a4fc530345a232a60a87083ea87635a76a637d0c
+PODFILE CHECKSUM: 00e76a45d7c081747b70944ba902d21ed87152ee
 
 COCOAPODS: 1.11.2

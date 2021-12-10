@@ -11,7 +11,7 @@ target 'MarvelRx' do
     pod 'Alamofire', '4.9'
     pod 'RxDataSources'
     pod 'ReactiveCoordinator', '4.0.0'
-
+    pod 'Kingfisher'
 
 
   # Pods for MarvelRx

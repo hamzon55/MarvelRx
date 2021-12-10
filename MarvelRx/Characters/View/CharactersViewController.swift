@@ -15,14 +15,14 @@ class CharactersViewController: UIViewController {
     // MARK: - Properties
     let disposeBag = DisposeBag()
     var viewModel: CharactersViewModel!
-    @IBOutlet weak var charactersTv: UITableView!
     
+    @IBOutlet weak var charactersCv: UICollectionView!
     // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        charactersTv.register(UINib(nibName: "CharactersCell", bundle: nil), forCellReuseIdentifier: "CharactersCell")
+        charactersCv.register(UINib(nibName: "CharactersCell", bundle: nil), forCellWithReuseIdentifier: "CharactersCell")
       
         bindTableView()
         viewModel.fetchCharacters{ (errorMessage) in
@@ -37,10 +37,12 @@ class CharactersViewController: UIViewController {
     
 extension CharactersViewController {
     func bindTableView() {
-
-        viewModel.characters
-            .bind(to: charactersTv.rx.items(cellIdentifier: "CharactersCell", cellType: CharactersCell.self)) { index, viewModel, cell in
-                cell.viewModel = viewModel
+        
+        
+        viewModel.characters.bind(to: charactersCv.rx.items(cellIdentifier: "CharactersCell",cellType: CharactersCell.self)) { index, viewModel, cell in
+            cell.viewModel = viewModel
             }.disposed(by: disposeBag)
+        
+        
     }
 }

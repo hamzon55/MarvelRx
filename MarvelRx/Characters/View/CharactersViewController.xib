@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharactersViewController" customModule="MarvelRx" customModuleProvider="target">
             <connections>
-                <outlet property="charactersTv" destination="h9P-TE-eQW" id="jtT-36-L76"/>
+                <outlet property="charactersCv" destination="q2R-q7-d8n" id="OlB-dO-bse"/>
                 <outlet property="view" destination="iN0-l3-epB" id="TiV-2L-NA5"/>
             </connections>
         </placeholder>
@@ -20,18 +20,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="h9P-TE-eQW">
-                    <rect key="frame" x="0.0" y="32" width="414" height="864"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-q7-d8n">
+                    <rect key="frame" x="5" y="54" width="404" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q8a-Fn-s7w">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="h9P-TE-eQW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="1Qs-MD-jJG"/>
-                <constraint firstAttribute="bottom" secondItem="h9P-TE-eQW" secondAttribute="bottom" constant="6" id="ANO-25-hQJ"/>
-                <constraint firstItem="h9P-TE-eQW" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="byO-Fc-Vum"/>
-                <constraint firstItem="h9P-TE-eQW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tcB-Sd-t1d"/>
+                <constraint firstItem="q2R-q7-d8n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="9f2-nr-91P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="q2R-q7-d8n" secondAttribute="trailing" constant="5" id="CoS-LK-CRj"/>
+                <constraint firstItem="q2R-q7-d8n" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="10" id="GOa-mh-F8e"/>
+                <constraint firstItem="q2R-q7-d8n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Qlj-kk-QNR"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>

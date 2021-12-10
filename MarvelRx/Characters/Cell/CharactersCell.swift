@@ -7,15 +7,13 @@
 
 import UIKit
 
-class CharactersCell: UITableViewCell {
+class CharactersCell: UICollectionViewCell {
     
     
+    @IBOutlet weak var heroImg: UIImageView!
     @IBOutlet weak var lblHero: UILabel!
     
-    override  func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
+ 
     
     static var cellType: String {
         return String(describing: self)
@@ -35,5 +33,10 @@ class CharactersCell: UITableViewCell {
 extension CharactersCell {
     private func configure() {
         lblHero.text = viewModel.name
+        
+        let url = URL(string: viewModel.thumbnail.path! + "." + "jpg")
+        guard let data = try? Data(contentsOf: url!) else { return }
+        heroImg?.image = UIImage(data: data)
+        
     }
 }

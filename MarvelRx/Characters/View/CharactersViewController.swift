@@ -63,6 +63,9 @@ extension CharactersViewController {
             cell.viewModel = viewModel
             }.disposed(by: disposeBag)
         
+        charactersCv.rx.modelSelected(CharacterViewModel.self)
+            .bind(to: viewModel.selectedCharacter)
+            .disposed(by: disposeBag)
         
     }
 }

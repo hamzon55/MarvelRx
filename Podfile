@@ -24,5 +24,4 @@ target 'MarvelRx' do
   target 'MarvelRxUITests' do
     # Pods for testing
   end
-
 end

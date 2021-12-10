@@ -15,6 +15,9 @@ class CharactersViewModel {
     // MARK: - Actions
     let isLoading = BehaviorSubject<Bool>(value: false)
 
+    
+    let selectedCharacter = PublishSubject<CharacterViewModel>()
+
     // MARK: - Table View Model and Data Source
     var characters = BehaviorSubject<[CharacterViewModel]>(
         value: []

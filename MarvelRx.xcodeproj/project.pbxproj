@@ -12,6 +12,9 @@
 		BB04C0E5275F898D00F2E3F8 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB04C0E4275F898D00F2E3F8 /* Characters.swift */; };
 		BB151F0227620F4700F4623E /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F0127620F4700F4623E /* CharactersCoordinator.swift */; };
 		BB151F042762103200F4623E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F032762103200F4623E /* AppCoordinator.swift */; };
+		BB151F072763A3CF00F4623E /* CharactersDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F062763A3CF00F4623E /* CharactersDetailCoordinator.swift */; };
+		BB151F092763A3FB00F4623E /* CharactersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F082763A3FA00F4623E /* CharactersDetailViewController.swift */; };
+		BB151F0C2763A45F00F4623E /* CharactersDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB151F0B2763A45F00F4623E /* CharactersDetailViewController.xib */; };
 		BB7BCCA82758F90E0049338E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7BCCA72758F90E0049338E /* AppDelegate.swift */; };
 		BB7BCCAA2758F90E0049338E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7BCCA92758F90E0049338E /* SceneDelegate.swift */; };
 		BB7BCCB12758F9120049338E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7BCCB02758F9120049338E /* Assets.xcassets */; };
@@ -60,6 +63,9 @@
 		BB04C0E4275F898D00F2E3F8 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		BB151F0127620F4700F4623E /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 		BB151F032762103200F4623E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BB151F062763A3CF00F4623E /* CharactersDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailCoordinator.swift; sourceTree = "<group>"; };
+		BB151F082763A3FA00F4623E /* CharactersDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailViewController.swift; sourceTree = "<group>"; };
+		BB151F0B2763A45F00F4623E /* CharactersDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersDetailViewController.xib; sourceTree = "<group>"; };
 		BB7BCCA42758F90E0049338E /* MarvelRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7BCCA72758F90E0049338E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB7BCCA92758F90E0049338E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,8 +189,27 @@
 		BB151F05276381AB00F4623E /* CharactersDetail */ = {
 			isa = PBXGroup;
 			children = (
+				BB151F0D2763A4BB00F4623E /* Coordinator */,
+				BB151F0A2763A43D00F4623E /* View */,
 			);
 			path = CharactersDetail;
+			sourceTree = "<group>";
+		};
+		BB151F0A2763A43D00F4623E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB151F082763A3FA00F4623E /* CharactersDetailViewController.swift */,
+				BB151F0B2763A45F00F4623E /* CharactersDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB151F0D2763A4BB00F4623E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BB151F062763A3CF00F4623E /* CharactersDetailCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		BB7BCC9B2758F90E0049338E = {
@@ -382,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBAA153B275FB5A500108087 /* CharactersViewController.xib in Resources */,
+				BB151F0C2763A45F00F4623E /* CharactersDetailViewController.xib in Resources */,
 				BB7BCCB42758F9120049338E /* LaunchScreen.storyboard in Resources */,
 				BBAA153F275FB7F000108087 /* CharactersCell.xib in Resources */,
 				BB7BCCB12758F9120049338E /* Assets.xcassets in Resources */,
@@ -521,10 +547,12 @@
 				BB151F042762103200F4623E /* AppCoordinator.swift in Sources */,
 				BBAA1539275FB56300108087 /* CharactersViewController.swift in Sources */,
 				BBAA1541275FB80000108087 /* CharactersCell.swift in Sources */,
+				BB151F072763A3CF00F4623E /* CharactersDetailCoordinator.swift in Sources */,
 				BB7BCCA82758F90E0049338E /* AppDelegate.swift in Sources */,
 				BB7BCCAA2758F90E0049338E /* SceneDelegate.swift in Sources */,
 				BBAA1537275FA2F600108087 /* CharactersService.swift in Sources */,
 				BB04C0E5275F898D00F2E3F8 /* Characters.swift in Sources */,
+				BB151F092763A3FB00F4623E /* CharactersDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

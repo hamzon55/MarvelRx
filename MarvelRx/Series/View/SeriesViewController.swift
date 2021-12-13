@@ -32,6 +32,7 @@ class SeriesViewController: UIViewController,UISearchBarDelegate {
         seriesTv.register(UINib(nibName: "SeriesCell", bundle: nil), forCellReuseIdentifier: "SeriesCell")
         setupNavItem()
         bindTableView()
+        bindHUD()
        // bindSearchBar()
 
         viewModel.fetchSeries(title: searchBar.text!){ (errorMessage) in
@@ -68,6 +69,15 @@ extension SeriesViewController {
 //            .bind(to: viewModel.searchText)
 //            .disposed(by: disposeBag)
 //        }
+    
+    func bindHUD() {
+        
+        viewModel.isLoading
+            .subscribe(onNext: { [weak self] isLoading in
+                isLoading ? self?.showProgress() : self?.hideProgress()
+            })
+            .disposed(by: disposeBag)
+    }
     
     func setupNavItem() {
         self.navigationItem.titleView = searchBar

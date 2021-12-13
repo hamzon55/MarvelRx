@@ -22,23 +22,23 @@ class SeriesCoordinator: ReactiveCoordinator<Void> {
         let viewModel = SeriesViewModel()
         viewController.viewModel = viewModel
         
-//        viewModel.selectedSeries
-//            .flatMap({ [unowned self] (characterViewModel) in
-//                self.coordinateToCharacterDetail(with: characterViewModel)
-//            })
-//            .subscribe()
-//            .disposed(by: disposeBag)
+        viewModel.selectedSeries
+            .flatMap({ [unowned self] (serieViewModel) in
+                self.coordinateToSerieDetail(with: serieViewModel)
+            })
+            .subscribe()
+            .disposed(by: disposeBag)
 
         return Observable.never()
     }
     
-//    // MARK: - Coordination
-//    private func coordinateToCharacterDetail(with characterViewModel: CharacterViewModel) -> Observable<Void> {
-//        let characterDetailCoordinator = CharactersDetailCoordinator(rootViewController: rootViewController)
-//        characterDetailCoordinator.viewModel = characterViewModel
-//        return coordinate(to: characterDetailCoordinator)
-//            .map { _ in () }
-//    }
+    // MARK: - Coordination
+    private func coordinateToSerieDetail(with serieViewModel: SerieViewModel) -> Observable<Void> {
+        let serieDetailCoordinator = SeriesDetailCoordinator(rootViewController: rootViewController)
+        serieDetailCoordinator.viewModel = serieViewModel
+        return coordinate(to: serieDetailCoordinator)
+            .map { _ in () }
+    }
     
   
 }

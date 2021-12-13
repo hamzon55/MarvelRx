@@ -13,10 +13,10 @@ struct SerieViewModel {
 
     let title: String
     let thumbnail: Thumbnail
-
+    let description: String
     init(serie: HeroCharacter) {
         
-      
+        self.description = serie.description ?? ""
         self.title = serie.title!
         self.thumbnail = serie.thumbnail!
 

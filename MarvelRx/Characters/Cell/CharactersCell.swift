@@ -13,13 +13,10 @@ class CharactersCell: UICollectionViewCell {
     
     @IBOutlet weak var heroImg: UIImageView!
     @IBOutlet weak var lblHero: UILabel!
-    
- 
-    
+        
     static var cellType: String {
         return String(describing: self)
     }
-    
 
     // MARK: - Properties
     var viewModel: CharacterViewModel! {
@@ -28,7 +25,6 @@ class CharactersCell: UICollectionViewCell {
         }
     }
 }
-
 
 // MARK: - Configuration
 extension CharactersCell {

@@ -35,9 +35,7 @@ extension CharactersCell {
     private func configure() {
         lblHero.text = viewModel.name
         lblHero.textColor = .black
-      
-        
-        let url =  URL(string: viewModel.thumbnail.path! + "." + "jpg")
+        let url =  URL(string: viewModel.thumbnail.fullName)
         heroImg.kf.setImage(with: url)
 
     }

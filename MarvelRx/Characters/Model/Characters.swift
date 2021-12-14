@@ -9,7 +9,7 @@ import Foundation
 import ObjectMapper
 
 struct Characters: Mappable {
- var data: CharactersClass?
+    var data: CharactersClass?
     
     init?(map: Map) {}
     
@@ -25,60 +25,115 @@ struct CharactersClass: Mappable {
     mutating func mapping(map: Map) {
         results <- map["results"]
     }
-
-    
 }
 
 struct HeroCharacter: Mappable {
     var id: Int?
-    var name: String?
+    var name: String? = ""
+    var title: String? = ""
     var thumbnail: Thumbnail?
-    var description: String?
-    
+    var description: String? = ""
+    var comics: thumbnailComics?
+    var series: thumbnailComics?
+    var stories: thumbnailStories?
     
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
-        id     <- map["id"]
-        name     <- map["name"]
+        id   <- map["id"]
+        title   <- map["title"]
+        name  <- map["name"]
         thumbnail  <- map["thumbnail"]
         description <- map["description"]
-
+        comics <- map["comics"]
+        stories <- map["stories"]
+        series <- map["series"]
+        
     }
 }
 
-//struct HeroURL: Mappable {
-//    var type: String?
-//    var url: String?
-//
-//    init?(map: Map) {}
-//
-//    mutating func mapping(map: Map) {
-//        type     <- map["type"]
-//        url     <- map["url"]
-//    }
-//}
-//
+
+// MARK: - thumbnailComics
+struct thumbnailComics: Mappable {
+    var available: Int?
+    var collectionURI: String?
+    var items: [thumbnailComicsItem]?
+    var returned: Int?
+    
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
+        available   <- map["available"]
+        collectionURI  <- map["collectionURI"]
+        items  <- map["items"]
+        returned <- map["returned"]
+    }
+}
+
+// MARK: - thumbnailComicsItem
+struct thumbnailComicsItem: Mappable {
+    var resourceURI: String?
+    var name: String?
+    
+    init?(map: Map) {}
+    mutating func mapping(map: Map) {
+        resourceURI  <- map["resourceURI"]
+        name   <- map["name"]
+        
+    }
+}
+
+// MARK: - thumbnailStories
+struct thumbnailStories: Mappable {
+    var available: Int?
+    var collectionURI: String?
+    var items: [thumbnailStoriesItem]?
+    var returned: Int?
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
+        available     <- map["available"]
+        collectionURI  <- map["collectionURI"]
+        items   <- map["items"]
+        returned <- map["returned"]
+        
+    }
+}
+
+// MARK: - thumbnailStoriesItem
+struct thumbnailStoriesItem: Mappable {
+    var resourceURI: String?
+    var name: String?
+   // var type: thumbnailItemType?
+    
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
+        resourceURI  <- map["resourceURI"]
+        name  <- map["name"]
+      //  type  <- map["type"]
+    }
+}
+
+
 
 struct Thumbnail: Mappable {
-    var path: String?
-    var thumbnailExtension: String?
-
-    init?(map: Map) {}
-  
-      mutating func mapping(map: Map) {
-          path     <- map["path"]
-          thumbnailExtension  <- map["extension"]
-      }
-}
+    var path: String = ""
+    var thumbnailExtension: String = ""
     
-//    var fullName: String {
-//        get { return path + "." + thumbnailExtension.rawValue }
-//       }
-//}
-//
-//enum Extension: String, Codable {
-//    case gif = "gif"
-//    case jpg = "jpg"
-//}
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
+        path     <- map["path"]
+        thumbnailExtension  <- map["extension"]
+    }
+    
+    var fullName: String {
+    get { return path + "." + thumbnailExtension}
+           }
+    }
+    
+
+    
+
 

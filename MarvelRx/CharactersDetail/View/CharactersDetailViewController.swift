@@ -9,9 +9,12 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class CharactersDetailViewController: UIViewController {
     
+    @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var imgHero: UIImageView!
     @IBOutlet weak var lblHeroName: UILabel!
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -36,7 +39,9 @@ extension CharactersDetailViewController {
   
     func bindViewModel() {
         self.lblHeroName.text = viewModel.name
-  
+        self.lblDesc.text = viewModel.description
+        let url =  URL(string: viewModel.thumbnail.fullName)
+        imgHero.kf.setImage(with: url)
     }
 }
 

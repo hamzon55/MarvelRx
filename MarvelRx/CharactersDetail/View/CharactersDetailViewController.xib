@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharactersDetailViewController" customModule="MarvelRx" customModuleProvider="target">
             <connections>
+                <outlet property="characterCv" destination="DED-X3-Rky" id="uzG-cU-mbe"/>
                 <outlet property="imgHero" destination="O8t-FM-LjM" id="KST-d7-C30"/>
                 <outlet property="lblDesc" destination="1Yc-Hi-Are" id="8FY-Ky-l45"/>
                 <outlet property="lblHeroName" destination="ibK-bG-fNf" id="ajK-CV-syb"/>
@@ -30,7 +31,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yc-Hi-Are">
-                    <rect key="frame" x="20" y="360" width="374" height="186"/>
+                    <rect key="frame" x="20" y="359.5" width="374" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -45,13 +46,28 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DED-X3-Rky">
+                    <rect key="frame" x="10" y="554" width="398" height="308"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="308" id="EVX-ue-4DX"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xkr-v4-s8b">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="O8t-FM-LjM" secondAttribute="trailing" constant="20" id="6Ik-AA-doS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Yc-Hi-Are" secondAttribute="bottom" constant="316" id="BLj-Jb-V2J"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DED-X3-Rky" secondAttribute="trailing" constant="6" id="7bW-U3-Knr"/>
+                <constraint firstItem="DED-X3-Rky" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Dg5-Ng-xKw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Yc-Hi-Are" secondAttribute="trailing" constant="20" id="K6T-Ba-dpH"/>
+                <constraint firstItem="DED-X3-Rky" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="XMK-gb-Pfr"/>
                 <constraint firstItem="ibK-bG-fNf" firstAttribute="top" secondItem="O8t-FM-LjM" secondAttribute="bottom" constant="23" id="ajd-Ww-dDE"/>
                 <constraint firstItem="O8t-FM-LjM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="e1e-9O-1Sd"/>
                 <constraint firstItem="ibK-bG-fNf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="17" id="m6r-7x-tWF"/>

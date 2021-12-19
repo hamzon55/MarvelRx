@@ -41,6 +41,8 @@
 		BBAA153F275FB7F000108087 /* CharactersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBAA153E275FB7F000108087 /* CharactersCell.xib */; };
 		BBAA1541275FB80000108087 /* CharactersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA1540275FB80000108087 /* CharactersCell.swift */; };
 		BBAA1543275FB8DB00108087 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA1542275FB8DB00108087 /* CharacterViewModel.swift */; };
+		BBE85208276F95BC002E72F2 /* CharactersDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE85207276F95BC002E72F2 /* CharactersDetailCell.swift */; };
+		BBE8520A276F95C9002E72F2 /* CharactersDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE85209276F95C9002E72F2 /* CharactersDetailCell.xib */; };
 		CDE6B79A8CF309D7361912EF /* Pods_MarvelRx_MarvelRxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA464795AC103920A8CC15 /* Pods_MarvelRx_MarvelRxUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +107,8 @@
 		BBAA153E275FB7F000108087 /* CharactersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersCell.xib; sourceTree = "<group>"; };
 		BBAA1540275FB80000108087 /* CharactersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCell.swift; sourceTree = "<group>"; };
 		BBAA1542275FB8DB00108087 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		BBE85207276F95BC002E72F2 /* CharactersDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailCell.swift; sourceTree = "<group>"; };
+		BBE85209276F95C9002E72F2 /* CharactersDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersDetailCell.xib; sourceTree = "<group>"; };
 		BF9FB6CCA6AAE4437334FF0B /* Pods-MarvelRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelRx.release.xcconfig"; path = "Target Support Files/Pods-MarvelRx/Pods-MarvelRx.release.xcconfig"; sourceTree = "<group>"; };
 		CFA967178D00A51D18194F40 /* Pods-MarvelRx-MarvelRxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelRx-MarvelRxUITests.debug.xcconfig"; path = "Target Support Files/Pods-MarvelRx-MarvelRxUITests/Pods-MarvelRx-MarvelRxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +215,7 @@
 		BB151F05276381AB00F4623E /* CharactersDetail */ = {
 			isa = PBXGroup;
 			children = (
+				BBE85206276F95AF002E72F2 /* Cell */,
 				BB151F0D2763A4BB00F4623E /* Coordinator */,
 				BB151F0A2763A43D00F4623E /* View */,
 			);
@@ -380,6 +385,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		BBE85206276F95AF002E72F2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BBE85207276F95BC002E72F2 /* CharactersDetailCell.swift */,
+				BBE85209276F95C9002E72F2 /* CharactersDetailCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -493,6 +507,7 @@
 				BB151F152764F26000F4623E /* SeriesViewController.xib in Resources */,
 				BB151F0C2763A45F00F4623E /* CharactersDetailViewController.xib in Resources */,
 				BB7BCCB42758F9120049338E /* LaunchScreen.storyboard in Resources */,
+				BBE8520A276F95C9002E72F2 /* CharactersDetailCell.xib in Resources */,
 				BBAA153F275FB7F000108087 /* CharactersCell.xib in Resources */,
 				BB7BCCB12758F9120049338E /* Assets.xcassets in Resources */,
 				BB151F172764F39C00F4623E /* SeriesCell.xib in Resources */,
@@ -635,6 +650,7 @@
 				BB151F1F276657CC00F4623E /* SerieViewModel.swift in Sources */,
 				BB151F042762103200F4623E /* AppCoordinator.swift in Sources */,
 				BBAA1539275FB56300108087 /* CharactersViewController.swift in Sources */,
+				BBE85208276F95BC002E72F2 /* CharactersDetailCell.swift in Sources */,
 				BB151F1D2766559C00F4623E /* SeriesViewModel.swift in Sources */,
 				BBAA1541275FB80000108087 /* CharactersCell.swift in Sources */,
 				BB151F072763A3CF00F4623E /* CharactersDetailCoordinator.swift in Sources */,

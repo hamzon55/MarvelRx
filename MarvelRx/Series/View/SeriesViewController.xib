@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeriesViewController" customModule="MarvelRx" customModuleProvider="target">
             <connections>
+                <outlet property="searchTxt" destination="Lrk-Dc-z0x" id="ILk-0n-TFi"/>
                 <outlet property="seriesTv" destination="d1S-eV-7wA" id="KVh-xC-Rva"/>
                 <outlet property="view" destination="iN0-l3-epB" id="38V-Hb-ySf"/>
             </connections>
@@ -21,16 +22,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d1S-eV-7wA">
-                    <rect key="frame" x="0.0" y="37" width="414" height="825"/>
+                    <rect key="frame" x="0.0" y="113" width="414" height="749"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lrk-Dc-z0x">
+                    <rect key="frame" x="5" y="60" width="404" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Lrk-Dc-z0x" secondAttribute="trailing" constant="5" id="9Sz-mA-o2q"/>
+                <constraint firstItem="d1S-eV-7wA" firstAttribute="top" secondItem="Lrk-Dc-z0x" secondAttribute="bottom" constant="19" id="IyC-NT-J3H"/>
+                <constraint firstItem="Lrk-Dc-z0x" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="MvG-UD-pke"/>
                 <constraint firstItem="d1S-eV-7wA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YOi-sz-o9u"/>
+                <constraint firstItem="Lrk-Dc-z0x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="ZQY-nz-ppH"/>
                 <constraint firstItem="d1S-eV-7wA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cNB-m2-6gl"/>
-                <constraint firstItem="d1S-eV-7wA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="37" id="eSK-8a-Te9"/>
+                <constraint firstItem="Lrk-Dc-z0x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="sMq-YO-ky2"/>
                 <constraint firstItem="d1S-eV-7wA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="zuu-FK-mhc"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>

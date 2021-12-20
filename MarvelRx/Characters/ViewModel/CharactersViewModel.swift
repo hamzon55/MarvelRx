@@ -20,7 +20,6 @@ class CharactersViewModel {
     var characters = BehaviorSubject<[CharacterViewModel]>(
         value: []
     )
-    
     // MARK: - API Call
     func fetchCharacters(onError: @escaping (String) -> ()) {
         

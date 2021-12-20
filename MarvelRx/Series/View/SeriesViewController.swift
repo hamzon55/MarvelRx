@@ -10,45 +10,40 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SeriesViewController: UIViewController,UISearchBarDelegate {
+class SeriesViewController: UIViewController,UITextFieldDelegate {
    
     // MARK: - Properties
     let disposeBag = DisposeBag()
     var viewModel: SeriesViewModel!
 
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.placeholder = Constants.SEARCHFIELD_TEXT
-        return searchBar
-    }()
-    
-    
+    @IBOutlet weak var searchTxt: UITextField!
     @IBOutlet weak var seriesTv: UITableView!
     // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
+        searchTxt.delegate = self
+        searchTxt.placeholder = Constants.SEARCHFIELD_TEXT
         seriesTv.register(UINib(nibName: "SeriesCell", bundle: nil), forCellReuseIdentifier: "SeriesCell")
-        setupNavItem()
         bindTableView()
         bindHUD()
-       // bindSearchBar()
-
-        viewModel.fetchSeries(title: searchBar.text!){ (errorMessage) in
+        bindTextField()
+        viewModel.fetchSeries(title: searchTxt.text!){ (errorMessage) in
         }
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+      
     }
     
-  
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        viewModel.fetchSeries(title: searchBar.text!){ (errorMessage) in
+    @objc func textFieldDidChange(_ textField: UITextField) {
+
+        viewModel.fetchSeries(title: textField.text!){ (errorMessage) in
         }
     }
-}
+   
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        }
+    }
+
     
 extension SeriesViewController {
     func bindTableView() {
@@ -61,9 +56,10 @@ extension SeriesViewController {
         seriesTv.rx.modelSelected(CharacterViewModel.self)
             .bind(to: viewModel.selectedSeries)
             .disposed(by: disposeBag)
-    }
-    
+        
+      
 
+    }
     
     func bindHUD() {
         
@@ -73,8 +69,7 @@ extension SeriesViewController {
             })
             .disposed(by: disposeBag)
     }
-    
-    func setupNavItem() {
-        self.navigationItem.titleView = searchBar
+    func bindTextField(){
+        searchTxt.addTarget(self, action: #selector(SeriesViewController.textFieldDidChange(_:)), for: .editingChanged)
     }
 }

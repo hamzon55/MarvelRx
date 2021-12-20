@@ -82,8 +82,6 @@ struct thumbnailComicsItem: Mappable {
     }
 }
 
-
-
 struct Thumbnail: Mappable {
     var path: String = ""
     var thumbnailExtension: String = ""

@@ -21,7 +21,6 @@
 		BB151F192764F3BA00F4623E /* SeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F182764F3BA00F4623E /* SeriesCell.swift */; };
 		BB151F1B276654BB00F4623E /* SeriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F1A276654BB00F4623E /* SeriesService.swift */; };
 		BB151F1D2766559C00F4623E /* SeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F1C2766559C00F4623E /* SeriesViewModel.swift */; };
-		BB151F1F276657CC00F4623E /* SerieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F1E276657CC00F4623E /* SerieViewModel.swift */; };
 		BB151F212766597900F4623E /* SeriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F202766597900F4623E /* SeriesCoordinator.swift */; };
 		BB151F262767700E00F4623E /* LoadingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB151F252767700E00F4623E /* LoadingCircle.swift */; };
 		BB7BCCA82758F90E0049338E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7BCCA72758F90E0049338E /* AppDelegate.swift */; };
@@ -44,6 +43,8 @@
 		BBB63ECC276FF27700CCEAF3 /* SeriesDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB63ECB276FF27700CCEAF3 /* SeriesDetailCoordinator.swift */; };
 		BBB63ECE276FF34600CCEAF3 /* SeriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB63ECD276FF34600CCEAF3 /* SeriesDetailViewController.swift */; };
 		BBB63ED0276FF59600CCEAF3 /* SeriesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBB63ECF276FF59600CCEAF3 /* SeriesDetailViewController.xib */; };
+		BBB63ED92770BC8000CCEAF3 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB63ED82770BC8000CCEAF3 /* TabBarCoordinator.swift */; };
+		BBB63EDB2770BC8A00CCEAF3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB63EDA2770BC8A00CCEAF3 /* TabBarViewController.swift */; };
 		BBE85208276F95BC002E72F2 /* CharactersDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE85207276F95BC002E72F2 /* CharactersDetailCell.swift */; };
 		BBE8520A276F95C9002E72F2 /* CharactersDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE85209276F95C9002E72F2 /* CharactersDetailCell.xib */; };
 		CDE6B79A8CF309D7361912EF /* Pods_MarvelRx_MarvelRxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA464795AC103920A8CC15 /* Pods_MarvelRx_MarvelRxUITests.framework */; };
@@ -86,7 +87,6 @@
 		BB151F182764F3BA00F4623E /* SeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCell.swift; sourceTree = "<group>"; };
 		BB151F1A276654BB00F4623E /* SeriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesService.swift; sourceTree = "<group>"; };
 		BB151F1C2766559C00F4623E /* SeriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewModel.swift; sourceTree = "<group>"; };
-		BB151F1E276657CC00F4623E /* SerieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewModel.swift; sourceTree = "<group>"; };
 		BB151F202766597900F4623E /* SeriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCoordinator.swift; sourceTree = "<group>"; };
 		BB151F252767700E00F4623E /* LoadingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCircle.swift; sourceTree = "<group>"; };
 		BB7BCCA42758F90E0049338E /* MarvelRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +113,8 @@
 		BBB63ECB276FF27700CCEAF3 /* SeriesDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailCoordinator.swift; sourceTree = "<group>"; };
 		BBB63ECD276FF34600CCEAF3 /* SeriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesDetailViewController.swift; sourceTree = "<group>"; };
 		BBB63ECF276FF59600CCEAF3 /* SeriesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesDetailViewController.xib; sourceTree = "<group>"; };
+		BBB63ED82770BC8000CCEAF3 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		BBB63EDA2770BC8A00CCEAF3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		BBE85207276F95BC002E72F2 /* CharactersDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailCell.swift; sourceTree = "<group>"; };
 		BBE85209276F95C9002E72F2 /* CharactersDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersDetailCell.xib; sourceTree = "<group>"; };
 		BF9FB6CCA6AAE4437334FF0B /* Pods-MarvelRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelRx.release.xcconfig"; path = "Target Support Files/Pods-MarvelRx/Pods-MarvelRx.release.xcconfig"; sourceTree = "<group>"; };
@@ -258,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				BB151F1C2766559C00F4623E /* SeriesViewModel.swift */,
-				BB151F1E276657CC00F4623E /* SerieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -330,6 +331,7 @@
 		BB7BCCA62758F90E0049338E /* MarvelRx */ = {
 			isa = PBXGroup;
 			children = (
+				BBB63ED72770BC7400CCEAF3 /* TabBar */,
 				BBB63ED4277098CA00CCEAF3 /* Extensions */,
 				BB151F22276751AE00F4623E /* SeriesDetail */,
 				BB151F05276381AB00F4623E /* CharactersDetail */,
@@ -400,6 +402,15 @@
 				BB151F252767700E00F4623E /* LoadingCircle.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BBB63ED72770BC7400CCEAF3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BBB63ED82770BC8000CCEAF3 /* TabBarCoordinator.swift */,
+				BBB63EDA2770BC8A00CCEAF3 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		BBE85206276F95AF002E72F2 /* Cell */ = {
@@ -660,12 +671,13 @@
 				BBAA1533275F9CF900108087 /* ApiManager.swift in Sources */,
 				BB151F262767700E00F4623E /* LoadingCircle.swift in Sources */,
 				BB151F192764F3BA00F4623E /* SeriesCell.swift in Sources */,
+				BBB63EDB2770BC8A00CCEAF3 /* TabBarViewController.swift in Sources */,
 				BB151F0227620F4700F4623E /* CharactersCoordinator.swift in Sources */,
 				BBAA152D275F9C0700108087 /* Constants.swift in Sources */,
+				BBB63ED92770BC8000CCEAF3 /* TabBarCoordinator.swift in Sources */,
 				BB151F212766597900F4623E /* SeriesCoordinator.swift in Sources */,
 				BBAA152F275F9C2900108087 /* APiClient.swift in Sources */,
 				BBAA1543275FB8DB00108087 /* CharacterViewModel.swift in Sources */,
-				BB151F1F276657CC00F4623E /* SerieViewModel.swift in Sources */,
 				BB151F042762103200F4623E /* AppCoordinator.swift in Sources */,
 				BBAA1539275FB56300108087 /* CharactersViewController.swift in Sources */,
 				BBE85208276F95BC002E72F2 /* CharactersDetailCell.swift in Sources */,

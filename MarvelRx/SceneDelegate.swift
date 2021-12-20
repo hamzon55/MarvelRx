@@ -23,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .subscribe()
             .disposed(by: disposeBag)
      
-
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

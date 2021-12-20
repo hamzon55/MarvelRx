@@ -19,9 +19,9 @@ class AppCoordinator: ReactiveCoordinator<Void> {
     
     override func start() -> Observable<Void> {
         
-        let navigationController = UINavigationController(rootViewController: CharactersViewController())
+        let navigationController = UINavigationController(rootViewController: TabBarViewController())
         
-        let charactersCoordinator = CharactersCoordinator(rootViewController: navigationController.viewControllers[0])
+        let charactersCoordinator = TabBarCoordinator(rootViewController: navigationController.viewControllers[0])
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

@@ -18,7 +18,7 @@ class SeriesCell: UITableViewCell {
     }
     
     // MARK: - Properties
-    var viewModel: SerieViewModel! {
+    var viewModel: CharacterViewModel! {
         didSet {
             self.configure()
         }

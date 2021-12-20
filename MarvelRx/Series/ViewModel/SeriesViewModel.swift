@@ -14,23 +14,19 @@ class SeriesViewModel {
     
     // MARK: - Actions
     let isLoading = BehaviorSubject<Bool>(value: false)
-    let selectedSeries = PublishSubject<SerieViewModel>()
-
-    
-    var series = BehaviorSubject<[SerieViewModel]>(
+    let selectedSeries = PublishSubject<CharacterViewModel>()
+    var series = BehaviorSubject<[CharacterViewModel]>(
         value: []
     )
     
     // MARK: - API Call
     func fetchSeries(title: String,onError: @escaping (String) -> ()) {
     
-
-        
         self.isLoading.onNext(true)
         SeriesService.shared.getSeries( titleSerie: title, success: { (code, series) in
             self.isLoading.onNext(false)
    
-            let serieItems = series.data?.results!.compactMap { SerieViewModel(serie: $0)
+            let serieItems = series.data?.results!.compactMap { CharacterViewModel(character: $0)
             }
             self.series.onNext(serieItems!)
     

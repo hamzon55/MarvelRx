@@ -13,6 +13,7 @@ import Kingfisher
 
 class CharactersDetailViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var lblCharacters: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
     @IBOutlet weak var imgHero: UIImageView!
     @IBOutlet weak var lblHeroName: UILabel!
@@ -33,7 +34,7 @@ class CharactersDetailViewController: UIViewController,UICollectionViewDelegateF
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 5.0, left: 1.0, bottom: 1.0, right: 1.0)
+        return UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -62,6 +63,7 @@ extension CharactersDetailViewController {
     
     func bindViewModel() {
         self.lblHeroName.text = viewModel.name
+        self.lblCharacters.text  = Constants.SERIES_TEXT
         self.lblDesc.text = viewModel.description
         let url =  URL(string: viewModel.thumbnail.fullName)
         imgHero.kf.setImage(with: url)
@@ -84,7 +86,5 @@ extension CharactersDetailViewController {
         comics.bind(to: characterCv.rx.items(cellIdentifier: "CharactersDetailCell",cellType: CharactersDetailCell.self)) { index, viewModel, cell in
             cell.viewModel = viewModel
                     }.disposed(by: disposeBag)
-
     }
 }
-

@@ -58,17 +58,12 @@ extension SeriesViewController {
             cell.viewModel = viewModel
             }.disposed(by: disposeBag)
         
-        seriesTv.rx.modelSelected(SerieViewModel.self)
+        seriesTv.rx.modelSelected(CharacterViewModel.self)
             .bind(to: viewModel.selectedSeries)
             .disposed(by: disposeBag)
     }
     
-//    func bindSearchBar() {
-//        searchBar.rx.text
-//            .orEmpty
-//            .bind(to: viewModel.searchText)
-//            .disposed(by: disposeBag)
-//        }
+
     
     func bindHUD() {
         

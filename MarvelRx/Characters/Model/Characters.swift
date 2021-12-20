@@ -33,9 +33,9 @@ struct HeroCharacter: Mappable {
     var title: String? = ""
     var thumbnail: Thumbnail?
     var description: String? = ""
-    var comics: thumbnailComics?
+    var comics: thumbnailCharacters?
     var characters: thumbnailCharacters?
-    var stories: thumbnailStories?
+    var stories: thumbnailCharacters?
     
     init?(map: Map) {}
     
@@ -52,9 +52,7 @@ struct HeroCharacter: Mappable {
     }
 }
 
-
-// MARK: - thumbnailComics
-struct thumbnailComics: Mappable {
+struct thumbnailCharacters: Mappable {
     var available: Int?
     var collectionURI: String?
     var items: [thumbnailComicsItem]?
@@ -70,37 +68,6 @@ struct thumbnailComics: Mappable {
     }
 }
 
-struct thumbnailCharacters: Mappable {
-    var available: Int?
-    var collectionURI: String?
-    var items: [thumbnailNext]?
-    var returned: Int?
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        available   <- map["available"]
-        collectionURI  <- map["collectionURI"]
-        items  <- map["items"]
-        returned <- map["returned"]
-    }
-}
-
-
-// MARK: - thumbnailNext
-struct thumbnailNext: Mappable {
-    var resourceURI: String?
-    var name: String?
-    
-    init?(map: Map) {}
-    mutating func mapping(map: Map) {
-        resourceURI  <- map["resourceURI"]
-        name   <- map["name"]
-        
-    }
-}
-
-
 
 // MARK: - thumbnailComicsItem
 struct thumbnailComicsItem: Mappable {
@@ -112,36 +79,6 @@ struct thumbnailComicsItem: Mappable {
         resourceURI  <- map["resourceURI"]
         name   <- map["name"]
         
-    }
-}
-
-// MARK: - thumbnailStories
-struct thumbnailStories: Mappable {
-    var available: Int?
-    var collectionURI: String?
-    var items: [thumbnailStoriesItem]?
-    var returned: Int?
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        available     <- map["available"]
-        collectionURI  <- map["collectionURI"]
-        items   <- map["items"]
-        returned <- map["returned"]
-        
-    }
-}
-
-// MARK: - thumbnailStoriesItem
-struct thumbnailStoriesItem: Mappable {
-    var resourceURI: String?
-    var name: String?
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        resourceURI  <- map["resourceURI"]
-        name  <- map["name"]
     }
 }
 

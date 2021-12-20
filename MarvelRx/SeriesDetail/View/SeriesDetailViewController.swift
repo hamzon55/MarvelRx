@@ -34,7 +34,6 @@ class SeriesDetailViewController: UIViewController,UICollectionViewDelegateFlowL
         viewModel.didClose.onNext(())
     }
     
-
     // MARK: - Properties
     let disposeBag = DisposeBag()
     var viewModel: CharacterViewModel!
@@ -51,20 +50,17 @@ extension SeriesDetailViewController {
         let url =  URL(string: viewModel.thumbnail.fullName)
         serieImgView.kf.setImage(with: url)
     }
-    
     func registerCollection(){
         
         cvCharacters.register(UINib(nibName: "CharactersCell", bundle: nil), forCellWithReuseIdentifier: "CharactersCell")
         cvCharacters.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
- 
-    
+
     func bindCollectionView(){
 
-      
-        let arrayComics = (viewModel.characters.items)!
-        let comics = BehaviorSubject<[thumbnailNext]>(
+        let arrayComics = (viewModel.characters?.items)!
+        let comics = BehaviorSubject<[thumbnailComicsItem]>(
             value: arrayComics)
                 
         comics.bind(to: cvCharacters.rx.items(cellIdentifier: "CharactersCell",cellType: CharactersCell.self)) { index, viewModel, cell in

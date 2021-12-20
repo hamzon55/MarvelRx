@@ -24,6 +24,11 @@ class CharactersCell: UICollectionViewCell {
             self.configure()
         }
     }
+    var charModel:thumbnailComicsItem! {
+        didSet {
+            self.configureChar()
+        }
+    }
 }
 
 // MARK: - Configuration
@@ -35,4 +40,10 @@ extension CharactersCell {
         heroImg.kf.setImage(with: url)
 
     }
+    
+    private func configureChar() {
+        lblHero.text = charModel.name
+        
+    }
 }
+

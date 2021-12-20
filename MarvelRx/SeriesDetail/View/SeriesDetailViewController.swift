@@ -29,6 +29,25 @@ class SeriesDetailViewController: UIViewController,UICollectionViewDelegateFlowL
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0.5, left: 1, bottom: 1.0, right: 1.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let lay = collectionViewLayout as! UICollectionViewFlowLayout
+      
+        let widthPerItem = collectionView.frame.width / 2  - lay.minimumInteritemSpacing
+
+        return CGSize(width:widthPerItem, height:80)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         viewModel.didClose.onNext(())

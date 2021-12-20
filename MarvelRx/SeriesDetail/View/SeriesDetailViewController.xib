@@ -47,17 +47,11 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psu-4x-XOB">
-                    <rect key="frame" x="22" y="563" width="194" height="21"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" systemColor="systemRedColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VOA-TX-5YB">
-                    <rect key="frame" x="8" y="595" width="398" height="267"/>
+                    <rect key="frame" x="8" y="732" width="398" height="115"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="267" id="1Hf-Nj-PDq"/>
+                        <constraint firstAttribute="height" constant="115" id="1Hf-Nj-PDq"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oWy-dL-lte">
                         <size key="itemSize" width="128" height="128"/>
@@ -66,6 +60,12 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psu-4x-XOB">
+                    <rect key="frame" x="17" y="702" width="194" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="uMi-KF-TiL"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,18 +73,18 @@
                 <constraint firstItem="TeK-wZ-PXF" firstAttribute="leading" secondItem="uMi-KF-TiL" secondAttribute="leading" constant="17" id="0iS-34-tao"/>
                 <constraint firstItem="uMi-KF-TiL" firstAttribute="trailing" secondItem="nob-fF-RXm" secondAttribute="trailing" constant="20" id="3Vb-0O-Rvt"/>
                 <constraint firstItem="nob-fF-RXm" firstAttribute="leading" secondItem="uMi-KF-TiL" secondAttribute="leading" constant="20" id="8CC-Ew-hKG"/>
-                <constraint firstItem="VOA-TX-5YB" firstAttribute="top" secondItem="Psu-4x-XOB" secondAttribute="bottom" constant="11" id="FAO-eH-fax"/>
+                <constraint firstItem="VOA-TX-5YB" firstAttribute="top" secondItem="Psu-4x-XOB" secondAttribute="bottom" constant="9" id="FAO-eH-fax"/>
                 <constraint firstItem="nob-fF-RXm" firstAttribute="top" secondItem="TeK-wZ-PXF" secondAttribute="bottom" constant="39.5" id="IVw-wp-3j0"/>
                 <constraint firstItem="uMi-KF-TiL" firstAttribute="trailing" secondItem="in7-wN-Mkf" secondAttribute="trailing" constant="20" id="QSZ-JP-ubf"/>
-                <constraint firstItem="VOA-TX-5YB" firstAttribute="bottom" secondItem="uMi-KF-TiL" secondAttribute="bottom" id="QU1-Qd-Hhb"/>
+                <constraint firstItem="VOA-TX-5YB" firstAttribute="bottom" secondItem="uMi-KF-TiL" secondAttribute="bottom" constant="-15" id="QU1-Qd-Hhb"/>
                 <constraint firstItem="uMi-KF-TiL" firstAttribute="trailing" secondItem="VOA-TX-5YB" secondAttribute="trailing" constant="8" id="Zyx-lb-oFL"/>
                 <constraint firstItem="TeK-wZ-PXF" firstAttribute="top" secondItem="in7-wN-Mkf" secondAttribute="bottom" constant="23" id="jp1-zW-rJu"/>
                 <constraint firstItem="uMi-KF-TiL" firstAttribute="trailing" secondItem="TeK-wZ-PXF" secondAttribute="trailing" constant="26" id="m1o-eL-iW4"/>
-                <constraint firstItem="Psu-4x-XOB" firstAttribute="leading" secondItem="uMi-KF-TiL" secondAttribute="leading" constant="22" id="nYJ-dE-Iij"/>
+                <constraint firstItem="Psu-4x-XOB" firstAttribute="leading" secondItem="uMi-KF-TiL" secondAttribute="leading" constant="17" id="nYJ-dE-Iij"/>
                 <constraint firstItem="in7-wN-Mkf" firstAttribute="top" secondItem="uMi-KF-TiL" secondAttribute="top" constant="12" id="s9q-oL-qDL"/>
                 <constraint firstItem="VOA-TX-5YB" firstAttribute="leading" secondItem="uMi-KF-TiL" secondAttribute="leading" constant="8" id="uWs-lh-QkF"/>
                 <constraint firstItem="in7-wN-Mkf" firstAttribute="leading" secondItem="uMi-KF-TiL" secondAttribute="leading" constant="20" id="uiO-OM-c3E"/>
-                <constraint firstItem="uMi-KF-TiL" firstAttribute="trailing" secondItem="Psu-4x-XOB" secondAttribute="trailing" constant="198" id="xDx-gP-fxG"/>
+                <constraint firstItem="uMi-KF-TiL" firstAttribute="trailing" secondItem="Psu-4x-XOB" secondAttribute="trailing" constant="203" id="xDx-gP-fxG"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
         </view>

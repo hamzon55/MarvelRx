@@ -33,7 +33,7 @@ class SeriesCoordinator: ReactiveCoordinator<Void> {
     }
     
     // MARK: - Coordination
-    private func coordinateToSerieDetail(with serieViewModel: SerieViewModel) -> Observable<Void> {
+    private func coordinateToSerieDetail(with serieViewModel: CharacterViewModel) -> Observable<Void> {
         let serieDetailCoordinator = SeriesDetailCoordinator(rootViewController: rootViewController)
         serieDetailCoordinator.viewModel = serieViewModel
         return coordinate(to: serieDetailCoordinator)

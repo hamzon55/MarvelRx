@@ -10,18 +10,28 @@ import RxSwift
 struct CharacterViewModel {
     
     let didClose = PublishSubject<Void>()
-    
+
     let id: Int
+    let title: String
     let name: String
     let description: String
     let thumbnail: Thumbnail
-    
+    let stories: thumbnailStories
+    let comics: thumbnailComics
+    let characters: thumbnailCharacters
     init(character: HeroCharacter) {
         
         self.id = character.id!
         self.name = character.name!
-        self.description = character.description!
+        self.description = character.description ??  ""
         self.thumbnail = character.thumbnail!
+        self.comics = character.comics!
+        self.title = character.title!
+        self.characters = character.characters!
+        self.stories = character.stories!
+
     }
+  
+
     
 }

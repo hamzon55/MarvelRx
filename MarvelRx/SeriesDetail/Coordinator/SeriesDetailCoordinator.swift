@@ -2,9 +2,8 @@
 //  SeriesDetailCoordinator.swift
 //  MarvelRx
 //
-//  Created by Hamza on 13/12/21.
+//  Created by Hamza on 20/12/21.
 //
-
 
 import RxSwift
 import ReactiveCoordinator
@@ -12,7 +11,7 @@ import ReactiveCoordinator
 class SeriesDetailCoordinator: ReactiveCoordinator<Void> {
     
     private let rootViewController: UIViewController
-    public var viewModel: SerieViewModel!
+    public var viewModel: CharacterViewModel!
     
     init(rootViewController: UIViewController) {
         self.rootViewController = rootViewController

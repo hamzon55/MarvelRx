@@ -29,7 +29,6 @@ class CharactersDetailCell: UICollectionViewCell {
 extension CharactersDetailCell {
     private func configure() {
         
-        
         lblSerieName.text = viewModel.name
 
     }

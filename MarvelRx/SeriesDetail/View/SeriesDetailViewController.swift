@@ -2,47 +2,76 @@
 //  SeriesDetailViewController.swift
 //  MarvelRx
 //
-//  Created by Hamza on 13/12/21.
+//  Created by Hamza on 20/12/21.
 //
 
-import Foundation
+
 import UIKit
 import RxSwift
 import RxCocoa
 import Kingfisher
 
-class SeriesDetailViewController: UIViewController {
+class SeriesDetailViewController: UIViewController,UICollectionViewDelegateFlowLayout {
     
-  
-    @IBOutlet weak var serieDescLbl: UILabel!
+    
+    @IBOutlet weak var cvHeaderLbl: UILabel!
+    @IBOutlet weak var cvCharacters: UICollectionView!
+    @IBOutlet weak var descLbl: UILabel!
     @IBOutlet weak var serieTitleLbl: UILabel!
-    @IBOutlet weak var serieImgV: UIImageView!
+    @IBOutlet weak var serieImgView: UIImageView!
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerCollection()
         bindViewModel()
-
+        bindCollectionView()
+        
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         viewModel.didClose.onNext(())
     }
+    
 
     // MARK: - Properties
     let disposeBag = DisposeBag()
-    var viewModel: SerieViewModel!
+    var viewModel: CharacterViewModel!
 
 }
 
 // MARK: - Binding
 extension SeriesDetailViewController {
-  
+    
     func bindViewModel() {
+        self.cvHeaderLbl.text = Constants.CHARACTERS_TEXT
         self.serieTitleLbl.text = viewModel.title
+        self.descLbl.text = viewModel.description
         let url =  URL(string: viewModel.thumbnail.fullName)
-        serieImgV.kf.setImage(with: url)
-        self.serieDescLbl.text = viewModel.description
+        serieImgView.kf.setImage(with: url)
+    }
+    
+    func registerCollection(){
+        
+        cvCharacters.register(UINib(nibName: "CharactersCell", bundle: nil), forCellWithReuseIdentifier: "CharactersCell")
+        cvCharacters.rx.setDelegate(self).disposed(by: disposeBag)
+    }
+    
+ 
+    
+    func bindCollectionView(){
+
+      
+        let arrayComics = (viewModel.characters.items)!
+        let comics = BehaviorSubject<[thumbnailNext]>(
+            value: arrayComics)
+                
+        comics.bind(to: cvCharacters.rx.items(cellIdentifier: "CharactersCell",cellType: CharactersCell.self)) { index, viewModel, cell in
+            cell.charModel = viewModel
+                    }.disposed(by: disposeBag)
+
     }
 }
+
 

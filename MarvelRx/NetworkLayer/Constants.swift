@@ -18,6 +18,7 @@ struct Constants {
     static let API_HASH_VALUE = "f8cc0d1e4301a73cc2504f6a6983e9dd"
     static let API_TITLE_START_WITH = "titleStartsWith"
     static let SEARCHFIELD_TEXT = "Search For a serie"
+    static let CHARACTERS_TEXT = "Characters"
+    static let SERIES_TEXT = "Series"
 
-   
 }

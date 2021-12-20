@@ -18,5 +18,4 @@ class APIManager {
     lazy var apikey: String = {
         return "b64b2574549f20514cddfe770e958632"
     }()
-    
 }

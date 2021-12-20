@@ -20,7 +20,6 @@ class CharactersService {
             Constants.API_TIMESTAMP:"\(Constants.API_TIMESTAMP_VALUE)",
             Constants.API_HASH: Constants.API_HASH_VALUE
         ]
-        
         APIClient.shared.get(urlString: Constants.API_GET_CHARACTERS, parameters: parameters, success: { (code, characters) in
             success(code, characters)
         }) { (error) in

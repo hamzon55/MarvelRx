@@ -34,7 +34,7 @@ struct HeroCharacter: Mappable {
     var thumbnail: Thumbnail?
     var description: String? = ""
     var comics: thumbnailComics?
-    var series: thumbnailComics?
+    var characters: thumbnailCharacters?
     var stories: thumbnailStories?
     
     init?(map: Map) {}
@@ -47,7 +47,7 @@ struct HeroCharacter: Mappable {
         description <- map["description"]
         comics <- map["comics"]
         stories <- map["stories"]
-        series <- map["series"]
+        characters <- map["characters"]
         
     }
 }
@@ -70,10 +70,42 @@ struct thumbnailComics: Mappable {
     }
 }
 
-// MARK: - thumbnailComicsItem
-struct thumbnailComicsItem: Mappable {
+struct thumbnailCharacters: Mappable {
+    var available: Int?
+    var collectionURI: String?
+    var items: [thumbnailNext]?
+    var returned: Int?
+    
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
+        available   <- map["available"]
+        collectionURI  <- map["collectionURI"]
+        items  <- map["items"]
+        returned <- map["returned"]
+    }
+}
+
+
+// MARK: - thumbnailNext
+struct thumbnailNext: Mappable {
     var resourceURI: String?
     var name: String?
+    
+    init?(map: Map) {}
+    mutating func mapping(map: Map) {
+        resourceURI  <- map["resourceURI"]
+        name   <- map["name"]
+        
+    }
+}
+
+
+
+// MARK: - thumbnailComicsItem
+struct thumbnailComicsItem: Mappable {
+    var resourceURI: String? = ""
+    var name: String? = ""
     
     init?(map: Map) {}
     mutating func mapping(map: Map) {
@@ -104,14 +136,12 @@ struct thumbnailStories: Mappable {
 struct thumbnailStoriesItem: Mappable {
     var resourceURI: String?
     var name: String?
-   // var type: thumbnailItemType?
     
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
         resourceURI  <- map["resourceURI"]
         name  <- map["name"]
-      //  type  <- map["type"]
     }
 }
 
